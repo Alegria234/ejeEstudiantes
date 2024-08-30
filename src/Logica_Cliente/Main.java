@@ -8,6 +8,7 @@ import Helper.HelperValidacion;
 import Logica_Negocio.Estudiante;
 import Logica_Negocio.Universidad;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -20,16 +21,20 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int num_Es, rta, conteo;
+        int num_Es = 0, rta, conteo;
         String identificacion, nombre, id_uni;
         ArrayList<Estudiante> lsEstudiantes = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
-
+        
+do{
+    try{
         System.out.println("Digite el numero de estudiantes");
         num_Es = scan.nextInt();
-
+}catch(InputMismatchException e) {
+        System.out.println("Error");
+}
         scan.nextLine();
-
+    }while(num_Es <=0);
         for (int i = 0; i < num_Es; i++) {
 
             System.out.println("Digite el nombre del estudiante");
