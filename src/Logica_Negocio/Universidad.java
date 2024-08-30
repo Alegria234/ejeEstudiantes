@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class Universidad {
       //Atributos
-   private String Identificacion;
+   private String Id;
    private String Nombre;
    private ArrayList<Estudiante> IsEstudiantes;//Aqui se realiza la asociacion
 
@@ -20,17 +20,17 @@ public class Universidad {
     }
 
     public Universidad(String Identificacion, String Nombre, ArrayList<Estudiante> IsEstudiantes) {
-        this.Identificacion = Identificacion;
+        this.Id = Identificacion;
         this.Nombre = Nombre;
         this.IsEstudiantes = IsEstudiantes;
     }
 
     public String getIdentificacion() {
-        return Identificacion;
+        return Id;
     }
 
     public void setIdentificacion(String Identificacion) {
-        this.Identificacion = Identificacion;
+        this.Id = Identificacion;
     }
 
     public String getNombre() {
